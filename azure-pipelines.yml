@@ -31,6 +31,7 @@ steps:
     displayName: "Set up Go workspace"
 
   - script: |
+      echo "Install helm 3.1.2"
       HELM_URL=https://get.helm.sh
       HELM_TGZ=helm-v3.1.2-linux-amd64.tar.gz
       wget -q ${HELM_URL}/${HELM_TGZ}
