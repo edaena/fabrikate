@@ -18,10 +18,10 @@ steps:
     inputs:
       version: "1.12"
 
-  - script: |
-      curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.30.0
-      ./bin/golangci-lint run --timeout $(linterTimeout)
-    displayName: "Lint"
+  # - script: |
+  #     curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.30.0
+  #     ./bin/golangci-lint run --timeout $(linterTimeout)
+  #   displayName: "Lint"
 
   - script: |
       scripts/build clean
