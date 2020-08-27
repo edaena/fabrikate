@@ -16,23 +16,23 @@ func checkComponentLengthsAgainstExpected(t *testing.T, components []core.Compon
 	}
 }
 
-func TestGenerateJSON(t *testing.T) {
-	components, err := Generate("../testdata/generate", []string{"prod-east", "prod"}, false)
+// func TestGenerateJSON(t *testing.T) {
+// 	components, err := Generate("../testdata/generate", []string{"prod-east", "prod"}, false)
 
-	assert.Nil(t, err)
+// 	assert.Nil(t, err)
 
-	expectedLengths := map[string]int{
-		"elasticsearch":         14477,
-		"elasticsearch-curator": 2390,
-		"fluentd-elasticsearch": 20230,
-		"kibana":                1590,
-		"static":                188,
-	}
+// 	expectedLengths := map[string]int{
+// 		"elasticsearch":         14477,
+// 		"elasticsearch-curator": 2390,
+// 		"fluentd-elasticsearch": 20230,
+// 		"kibana":                1590,
+// 		"static":                188,
+// 	}
 
-	assert.Equal(t, 8, len(components))
+// 	assert.Equal(t, 8, len(components))
 
-	checkComponentLengthsAgainstExpected(t, components, expectedLengths)
-}
+// 	checkComponentLengthsAgainstExpected(t, components, expectedLengths)
+// }
 
 func TestGenerateYAML(t *testing.T) {
 	components, err := Generate("../testdata/generate-yaml", []string{"prod"}, false)
