@@ -34,14 +34,8 @@ steps:
       PATH=`pwd`/linux-amd64/:$PATH
     displayName: "Install helm"
   
-  - script: |
-      echo "GO version:"
-      go version
-      echo "GO test"
-      go test -v -race ./...
-
-  # - task: Go@0
-  #   displayName: Test
-  #   inputs:
-  #     command: test
-  #     arguments: -v -race ./...
+  - task: Go@0
+    displayName: Test
+    inputs:
+      command: test
+      arguments: -v -race ./...
