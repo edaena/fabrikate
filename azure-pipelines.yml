@@ -10,7 +10,6 @@ pool:
   vmImage: "Ubuntu-16.04"
 
 variables:
-  echo "Install Go"
   GOBIN: "$(GOPATH)/bin" # Go binaries path
   GOROOT: "/usr/local/go1.13" # Go installation path
   GOPATH: "$(system.defaultWorkingDirectory)/gopath" # Go workspace path
@@ -20,6 +19,7 @@ variables:
 
 steps:
   - script: |
+      echo "Installing GO"
       mkdir -p '$(GOBIN)'
       mkdir -p '$(GOPATH)/pkg'
       mkdir -p '$(modulePath)'
